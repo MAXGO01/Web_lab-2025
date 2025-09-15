@@ -4,183 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Налаштування</title>
-    <style>
-        /* Reset styles */
-        * {
-            padding: 0px;
-            margin: 0px;
-            border: none;
-        }
-        *,
-        *::before,
-        *::after {
-            box-sizing: border-box;
-        }
-        a, a:link, a:visited {
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: none;
-        }
-        aside, nav, footer, header, section, main {
-            display: block;
-        }
-        h1, h2, h3, h4, h5, h6, p {
-            font-size: inherit;
-            font-weight: inherit;
-        }
-        ul, ul li {
-            list-style: none;
-        }
-        img {
-            vertical-align: top;
-        }
-        img, svg {
-            max-width: 100%;
-            height: auto;
-        }
-        address {
-            font-style: normal;
-        }
-        input, textarea, button, select {
-            font-family: inherit;
-            font-size: inherit;
-            color: inherit;
-            background-color: transparent;
-        }
-        input::-ms-clear {
-            display: none;
-        }
-        button, input[type="submit"] {
-            display: inline-block;
-            box-shadow: none;
-            background-color: transparent;
-            background: none;
-            cursor: pointer;
-        }
-        input:focus, input:active,
-        button:focus, button:active {
-            outline: none;
-        }
-        button::-moz-focus-inner {
-            padding: 0;
-            border: 0;
-        }
-        label {
-            cursor: pointer;
-        }
-        legend {
-            display: block;
-        }
-        button {
-            background: none;
-            border: none;
-        }
-        
-        /* Ваші стилі */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background: linear-gradient(135deg, #b9ef24 10%, #2884c2 90%);
-            min-height: 100vh;
-        }
-        h1 {
-            font-size: 30px;
-            font-weight: bold;
-            margin-bottom: 20px;
-            color: #000000;
-        }
-        .settings-table {
-            width: 100%;
-            border-collapse: collapse;
-            background-color: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .settings-table th,
-        .settings-table td {
-            border: 1px solid #e0e0e0;
-            padding: 16px;
-            text-align: left;
-        }
-        .settings-table th {
-            background-color: #f8f9fa;
-            font-weight: bold;
-            color: #333;
-        }
-        .settings-table thead th {
-            background-color: #e9ecef;
-            text-align: center;
-        }
-        .main-header {
-            background-color: #6c757d !important;
-            color: white !important;
-            font-size: 18px;
-        }
-        .crypto-link {
-            color: #007bff;
-            font-weight: bold;
-            text-decoration: none;
-        }
-        .crypto-link:hover {
-            text-decoration: underline;
-            color: #0056b3;
-        }
-        .status-draft {
-            color: #6c757d;
-            font-weight: 500;
-        }
-        .status-active {
-            color: #28a745;
-            font-weight: bold;
-        }
-        .empty-cell {
-            background-color: #f8f9fa;
-        }
-    </style>
+    <link rel="stylesheet" href="./resourses/reset.css">
+    <link rel="stylesheet" href="./resourses/styles.css">
 </head>
 <body>
 
     <h1>Налаштування</h1>
 
-    <table class="settings-table">
-        <thead>
-            <tr>
-                <th class="main-header" colspan="5">All settings</th>
-            </tr>
-            <tr>
-                <th>Setting name</th>
-                <th>Status</th>
-                <th><a href="https://ru.investing.com/indices/investing.com-btc-usd" class="crypto-link" target="_blank">BTC</a></th>
-                <th><a href="https://ru.investing.com/indices/investing.com-usdt-usd" class="crypto-link" target="_blank">USDT</a></th>
-                <th><a href="https://ru.investing.com/crypto/toncoin/ton-usd" class="crypto-link" target="_blank">TON</a></th>
-            </tr>
-        </thead>
+    <div class="wraper">
+        <a href="#" class="link active-link">All settings</a>
+        <a href="#"class="link">Published</a>
+        <a href="#"class="link">BTC</a>
+        <a href="#"class="link">USDT</a>
+        <a href="#"class="link">TON</a>
+    </div>
+
+   <table class="table">
         <tbody>
+          <thead>
             <tr>
-                <td>Content</td>
-                <td class="status-draft">Draft</td>
-                <td class="empty-cell"></td>
-                <td class="empty-cell"></td>
-                <td class="empty-cell"></td>
+              <th class="table-head">Settings name</th>
+              <th class="table-head">Status</th>
             </tr>
-            <tr>
-                <td>Content</td>
-                <td class="status-active">Active</td>
-                <td class="empty-cell"></td>
-                <td class="empty-cell"></td>
-                <td class="empty-cell"></td>
-            </tr>
-            <tr>
-                <td>Content</td>
-                <td class="status-draft">Draft</td>
-                <td class="empty-cell"></td>
-                <td class="empty-cell"></td>
-                <td class="empty-cell"></td>
-            </tr>
+          </thead>
+          <tr class="table-elem">
+            <td>
+              <a href="#" class="table-link">Content</a>
+            </td>
+            <td class="status"><span class="draft">Draft</span></td>
+            <td class="delete-icon">
+              <button type="button" class="delete-button">
+                <img src="./delete-icon.svg" alt="delete icon" />
+              </button>
+            </td>
+          </tr>
+          <tr class="table-elem">
+            <td>
+              <a href="#" class="table-link">Content</a>
+            </td>
+            <td class="status"><span class="active">Active</span></td>
+            <td class="delete-icon">
+              <button type="button" class="delete-button">
+                <img src="./delete-icon.svg" alt="delete icon" />
+              </button>
+            </td>
+          </tr>
+          <tr class="table-elem">
+            <td>
+              <a href="#" class="table-link">Content</a>
+            </td>
+            <td class="status"><span class="draft">Draft</span></td>
+            <td class="delete-icon">
+              <button type="button" class="delete-button">
+                <img src="./delete-icon.svg" alt="delete icon" />
+              </button>
+            </td>
+          </tr>
         </tbody>
-    </table>
+      </table>
 
 </body>
 </html>
