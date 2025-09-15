@@ -1,26 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Крипта</title>
-    <style>
-        body {
-            line-height: 1.2; 
-        }
-        p {
-            margin: 0.2em 0; 
-        }
-    </style>
+    <title>Налаштування</title>
+    <link rel="stylesheet" href="./resourses/reset.css">
+    <link rel="stylesheet" href="./resourses/styles.css">
 </head>
 <body>
+
     <h1>Налаштування</h1>
-    <p>Всі налаштування</p>
-    <a href="https://ru.investing.com/equities/tanzanian-royalty-exploration-corp">TRX</p>
-    <a href="https://ru.investing.com/indices/investing.com-btc-usd">BTC</p>
-    <a href="https://ru.investing.com/indices/investing.com-usdt-usd">USDT</p>
-    <a href="https://ru.investing.com/crypto/toncoin/ton-usd">TON</p>
-    <a href="https://ru.investing.com/indices/investing.com-eth-usd">ETH</p>
-    
+
+    <div class="wraper">
+        <a href="#" class="link active-link">All settings</a>
+        <a href="#"class="link">Published</a>
+        <a href="#"class="link">BTC</a>
+        <a href="#"class="link">USDT</a>
+        <a href="#"class="link">TON</a>
+    </div>
+
+   <table class="table">
+        <tbody>
+          <thead>
+            <tr>
+              <th class="table-head">Settings name</th>
+              <th class="table-head">Status</th>
+            </tr>
+          </thead>
+          <tr class="table-elem">
+            <td>
+              <a href="#" class="table-link">Content</a>
+            </td>
+            <td class="status"><span class="draft">Draft</span></td>
+            <td class="delete-icon">
+              <button type="button" class="delete-button">
+                <img src="./delete-icon.svg" alt="delete icon" />
+              </button>
+            </td>
+          </tr>
+          <tr class="table-elem">
+            <td>
+              <a href="#" class="table-link">Content</a>
+            </td>
+            <td class="status"><span class="active">Active</span></td>
+            <td class="delete-icon">
+              <button type="button" class="delete-button">
+                <img src="./delete-icon.svg" alt="delete icon" />
+              </button>
+            </td>
+          </tr>
+          <tr class="table-elem">
+            <td>
+              <a href="#" class="table-link">Content</a>
+            </td>
+            <td class="status"><span class="draft">Draft</span></td>
+            <td class="delete-icon">
+              <button type="button" class="delete-button">
+                <img src="./delete-icon.svg" alt="delete icon" />
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
 </body>
 </html>
